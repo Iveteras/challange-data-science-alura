@@ -133,8 +133,7 @@ df_anuncios.drop(list_of_index_to_exclude, axis=0, inplace=True)
 df_anuncios.index = range(df_anuncios.shape[0])
 
 ###################### saving as parquet and csv ######################
-
-df_anuncios.to_parquet('data/anuncios_vendas.csv', engine='fastparquet', compression='snappy', index=None)
+df_anuncios.to_parquet('data/anuncios_vendas.parquet', engine='pyarrow', compression='snappy', index=None)
 df_anuncios.to_csv('data/anuncios_vendas.csv', sep=';', index=False)
 
 
