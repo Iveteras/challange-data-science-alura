@@ -3,7 +3,7 @@ import pandas as pd
 ###################### Firsts steps ######################
 
 # importing the data base
-df_anuncios = pd.read_csv('data/anuncios.csv', sep=';')
+df_anuncios = pd.read_csv('../data/anuncios.csv', sep=';')
 
 quartos = list(df_anuncios['quartos'])
 suites = list(df_anuncios['suites'])
@@ -133,8 +133,8 @@ df_anuncios.drop(list_of_index_to_exclude, axis=0, inplace=True)
 df_anuncios.index = range(df_anuncios.shape[0])
 
 ###################### saving as parquet and csv ######################
-df_anuncios.to_parquet('data/anuncios_vendas.parquet', engine='pyarrow', compression='snappy', index=None)
-df_anuncios.to_csv('data/anuncios_vendas.csv', sep=';', index=False)
+df_anuncios.to_parquet('../data/anuncios_vendas.parquet', engine='pyarrow', compression='snappy', index=None)
+df_anuncios.to_csv('../data/anuncios_vendas.csv', sep=';', index=False)
 
 
 

@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Reading the data base
-df = pd.read_json('./data/dataset_bruto.json')
+df = pd.read_json('../data/dataset_bruto.json')
 
 # Firs task
 number_of_rows = df.shape[0] # 89083 rows
@@ -56,6 +56,6 @@ df_anuncio.valores = valores
 df_anuncio.endereco = endereco
 
 # exporting as csv, so i can create a new file .py
-df_anuncio.to_csv('data/anuncios.csv', sep=';', index=False)
+df_anuncio.to_csv('../data/anuncios.csv', sep=';', index=False)
 
 
